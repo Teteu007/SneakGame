@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    background-image: url('fliperama.png'); /* Substitua 'fliperama.jpg' pelo caminho da sua imagem */
+    background-size: cover;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000;
+    background-color: rgba(255, 255, 255, 0.8); /* Adicionando um fundo branco translúcido para melhor legibilidade */
+    padding: 20px;
+}
+
+#score {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.game-board {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: #000;
+}
+
+.snake {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #00ff00;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+}
+
+.food {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('apple.png');
+    background-size: cover;
+}
+
+#gameOverMessage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+    color: #fff;
+    text-align: center;
+}
+
+#gameOverMessage.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#restartButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00ff00;
+    border: 2px solid #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
