@@ -85,3 +85,9 @@ body {
 .hidden {
     display: none;
 }
+.game-board {
+    width: 90vw;  /* Usando porcentagem da largura da tela */
+    height: 90vw; /* Para que o jogo fique quadrado */
+    max-width: 400px; /* Definir um tamanho máximo para telas maiores */
+    max-height: 400px;
+}
